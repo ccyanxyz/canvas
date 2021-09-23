@@ -15,5 +15,10 @@ service : {
   check_cooldown : () -> (nat64) query;
   http_request : (HttpRequest) -> (HttpResponse) query;
   time_left : () -> (nat64) query;
+  // todo: check ownership before update
   update_pixel : (nat32, Position, Color) -> ();
+  // todo
+  buy_pixel: (Position) -> ();
+  get_pixel_price: (Position) -> ();
+  buy_pixel_batch: ([Position]) -> ();
 }
